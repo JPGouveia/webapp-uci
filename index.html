@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<!-- @author: João Gouveia -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>UCI·Calc</title>
+  <meta name="description" content="Ferramentas de apoio em Medicina Intensiva — SMI, ULS Almada-Seixal" />
+  <meta name="theme-color" content="#020617" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="UCI·Calc" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Barra superior (só telemóvel/tablet) -->
+  <header class="topbar">
+    <button id="menuBtn" class="menu-btn" type="button" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#/" class="topbar-title" id="topTitle">UCI·Calc</a>
+  </header>
+  <div id="scrim" class="scrim"></div>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a href="#/" class="brand">
+        <h1 class="app-title" id="appName">UCI·Calc</h1>
+        <p class="app-subtitle" id="appSubtitle"></p>
+      </a>
+      <nav class="nav" id="nav" aria-label="Módulos"></nav>
+      <div class="footer-note"><small id="footerNote"></small></div>
+    </aside>
+
+    <main class="main" id="main">
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <!-- Núcleo -->
+  <script src="js/core/util.js"></script>
+  <script src="js/core/app.js"></script>
+
+  <!-- Fórmulas e dados (puros, testáveis) -->
+  <script src="js/modules/perfusoes/perfusoes.calc.js"></script>
+  <script src="js/modules/perfusoes/drugs.js"></script>
+  <script src="js/modules/renal/renal.calc.js"></script>
+
+  <!-- Módulos (a ordem define a ordem no menu) -->
+  <script src="js/modules/perfusoes/perfusoes.view.js"></script>
+  <script src="js/modules/renal/renal.view.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "webapp-uci",
+  "version": "0.8.1",
+  "private": true,
+  "description": "Ferramentas de apoio em Medicina Intensiva (SMI, ULS Almada-Seixal)",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "python3 -m http.server 8080"
+  },
+  "author": "João Gouveia"
+}
